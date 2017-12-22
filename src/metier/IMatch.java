@@ -1,5 +1,9 @@
 package metier;
 
-public interface IMatch {
+import java.util.ArrayList;
 
+import entitee.Ville;
+
+public interface IMatch {
+	ArrayList<Ville> selectionVille();
 }

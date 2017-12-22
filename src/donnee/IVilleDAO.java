@@ -1,7 +1,9 @@
 package donnee;
 
+import java.util.Collection;
+
 import entitee.Ville;
 
 public interface IVilleDAO {
-	public void select(Ville c);
+	public Collection<? extends Ville> select(Ville c);
 }

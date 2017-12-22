@@ -9,8 +9,7 @@ public class Ville {
 	
 	public Ville() {}
 	
-	public Ville(int id, int idDepartement, int idCanton, int idArrondissement, String villeNom) {
-		this.id = id;
+	public Ville(int idDepartement, int idCanton, int idArrondissement, String villeNom) {
 		this.idDepartement = idDepartement;
 		this.idCanton = idCanton;
 		this.idArrondissement = idArrondissement;
