@@ -10,4 +10,5 @@ public interface IMatch {
 	public int cantonChoisi();
 	public ArrayList<Ville> villesChoisis();
 	public void combat(int i, int j);
+	public void tournois();
 }

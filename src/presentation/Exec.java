@@ -14,7 +14,7 @@ public class Exec {
 		
 		IMatch m = (IMatch) context.getBean("match");
 		m.villesChoisis();
-		m.combat(1, 2);
+		m.tournois();
 	}
 
 }
