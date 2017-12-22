@@ -1,8 +1,13 @@
 package metier;
 
+import java.util.ArrayList;
+
+import entitee.Ville;
+
 public interface IMatch {
 	public int departementChoisi();
 	public int arrondissementChoisi();
 	public int cantonChoisi();
-	public void villesChoisis();
+	public ArrayList<Ville> villesChoisis();
+	public void combat(int i, int j);
 }

@@ -6,14 +6,18 @@ public class Ville {
 	private int idCanton;
 	private int idArrondissement;
 	private String villeNom;
+	private int villePopulation;
+	private int villeLatitude;
 	
 	public Ville() {}
 	
-	public Ville(int idDepartement, int idCanton, int idArrondissement, String villeNom) {
+	public Ville(int idDepartement, int idCanton, int idArrondissement, String villeNom, int villePopulation, int villeLatitude) {
 		this.idDepartement = idDepartement;
 		this.idCanton = idCanton;
 		this.idArrondissement = idArrondissement;
 		this.villeNom = villeNom;
+		this.villePopulation = villePopulation;
+		this.villeLatitude = villeLatitude;
 	}
 
 	public int getId() {
@@ -54,7 +58,21 @@ public class Ville {
 
 	public void setVilleNom(String villeNom) {
 		this.villeNom = villeNom;
+	}
+
+	public int getVillePopulation() {
+		return villePopulation;
+	}
+
+	public void setVillePopulation(int villePopulation) {
+		this.villePopulation = villePopulation;
+	}
+
+	public int getVilleLatitude() {
+		return villeLatitude;
+	}
+
+	public void setVilleLatitude(int villeLatitude) {
+		this.villeLatitude = villeLatitude;
 	};
-	
-	
 }
