@@ -13,22 +13,37 @@ import entitee.Ville;
 public class Match implements IMatch{
 	@Autowired
 	IVilleDAO dao;
-	private ArrayList<Ville> listeVille= new ArrayList<Ville>();
-	int codeDepartement;
+	int a;
 	int b;
 	int c;
+	String nomVille;
 	Scanner sc = new Scanner(System.in);
 	
 	public int departementChoisi() {
 		System.out.println("Sélectionnez votre code de département");
-		codeDepartement = Integer.parseInt(sc.nextLine());
-		return codeDepartement;
+		a = Integer.parseInt(sc.nextLine());
+		return a;
+	}
+	public int arrondissementChoisi() {
+		System.out.println("Sélectionnez votre code arrondissement");
+		b = Integer.parseInt(sc.nextLine());
+		return b;
+	}
+	public int cantonChoisi() {
+		System.out.println("Sélectionnez votre code de canton");
+		c = Integer.parseInt(sc.nextLine());
+		return c;
 	}
 
 	@Override
-	public ArrayList<Ville> selectionVille(int a, int b, int c, String d) {
-		listeVille.addAll(dao.select(new Ville(a,b,c,d)));
-		return listeVille;
-	}
+	public void villesChoisis() {
+		departementChoisi();
+		arrondissementChoisi();
+		cantonChoisi();
+
+		for (Ville ville : dao.find(a, b, c) ) {
+			System.out.println(ville.getVilleNom()+ "test");;
+		}
+}
 	
 }

@@ -1,9 +1,10 @@
 package donnee;
 
-import java.util.Collection;
+import java.sql.Connection;
+import java.util.ArrayList;
 
 import entitee.Ville;
 
 public interface IVilleDAO {
-	public Collection<? extends Ville> select(Ville c);
+	public ArrayList<Ville> find(int idDepartement,int idCanton,int idArrondissement);
 }
